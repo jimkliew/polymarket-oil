@@ -1,7 +1,5 @@
-// Vercel serverless function — proxies requests to Gamma API to avoid CORS
-module.exports = async function handler(req, res) {
-  const { url } = req
-  const path = url.replace(/^\/api\/gamma/, '')
+export default async function handler(req, res) {
+  const path = req.url.replace(/^\/api\/gamma/, '')
   const target = `https://gamma-api.polymarket.com${path}`
 
   try {

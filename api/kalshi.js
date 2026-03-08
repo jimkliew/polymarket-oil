@@ -1,7 +1,5 @@
-// Vercel serverless function — proxies requests to Kalshi API to avoid CORS
-module.exports = async function handler(req, res) {
-  const { url } = req
-  const path = url.replace(/^\/api\/kalshi/, '')
+export default async function handler(req, res) {
+  const path = req.url.replace(/^\/api\/kalshi/, '')
   const target = `https://api.elections.kalshi.com${path}`
 
   try {
