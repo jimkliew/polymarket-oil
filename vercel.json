@@ -1,0 +1,7 @@
+{
+  "rewrites": [
+    { "source": "/api/gamma/:path*", "destination": "/api/gamma" },
+    { "source": "/api/kalshi/:path*", "destination": "/api/kalshi" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
