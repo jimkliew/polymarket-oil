@@ -1,7 +1,9 @@
 {
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
   "rewrites": [
-    { "source": "/api/gamma/:path*", "destination": "/api/gamma" },
-    { "source": "/api/kalshi/:path*", "destination": "/api/kalshi" },
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/api/gamma/(.*)", "destination": "/api/gamma" },
+    { "source": "/api/kalshi/(.*)", "destination": "/api/kalshi" },
+    { "source": "/((?!api/).*)", "destination": "/index.html" }
   ]
 }
